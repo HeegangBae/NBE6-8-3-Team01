@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 const REFRESH_SUCCESS_KEY = 'refreshSucceeded';
 const INITIAL_LOGIN_KEY = 'initialLoginSucceeded';
 const MODAL_SHOWN_KEY = 'suspensionModalShown';
+const BASE_BACKEND_URL = process.env.NEXT_PUBLIC_API_BASE_URL
 
 export function useUserStatusCheck(loginSuccessDetected: boolean) {
     const [isSuspended, setIsSuspended] = useState(false);
@@ -24,7 +25,7 @@ export function useUserStatusCheck(loginSuccessDetected: boolean) {
             if ((initialLoginSucceeded || refreshSucceeded) && !hasModalBeenShown) {
                 console.log('[useUserStatusCheck] 플래그 감지. 사용자 상태 확인 API 호출.');
                 try {
-                    const res = await fetch('http://localhost:8080/api/v1/bookbook/users/me', {
+                    const res = await fetch(`${BASE_BACKEND_URL}/api/v1/bookbook/users/me`, {
                         method: 'GET',
                         credentials: 'include',
                     });

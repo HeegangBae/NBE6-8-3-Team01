@@ -1,6 +1,6 @@
 import axios, { AxiosError, InternalAxiosRequestConfig } from 'axios';
 
-const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:8080';
+const BACKEND_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 const GOOGLE_LOGIN_URI = process.env.NEXT_PUBLIC_GOOGLE_SERVER_REDIRECT_URI || `${BACKEND_BASE_URL}/oauth2/authorization/google`;
 
 // 1. axios 인스턴스 생성
