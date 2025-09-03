@@ -174,7 +174,7 @@ class AdminController (
     ) {
         val cookie = Cookie(tokenName, token).apply {
             isHttpOnly = true
-            secure = false
+            secure = true
             path = "/"
             this.maxAge = maxAge
         }

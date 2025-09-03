@@ -108,7 +108,7 @@ class SecurityConfig(
                         // 액세스 토큰 쿠키 삭제
                         val deleteAccessTokenCookie = Cookie(jwtAccessTokenCookieName, null).apply {
                             isHttpOnly = true
-                            secure = false
+                            secure = true
                             path = "/"
                             maxAge = 0
                         }
@@ -117,7 +117,7 @@ class SecurityConfig(
                         // 리프레시 토큰 쿠키 삭제
                         val deleteRefreshTokenCookie = Cookie(jwtRefreshTokenCookieName, null).apply {
                             isHttpOnly = true
-                            secure = false
+                            secure = true
                             path = "/"
                             maxAge = 0
                         }
@@ -143,7 +143,7 @@ class SecurityConfig(
     @Bean
     fun corsConfigurationSource(): CorsConfigurationSource {
         val configuration = CorsConfiguration().apply {
-            allowedOrigins = listOf("http://localhost:3000", "https://cdpn.io", "https://nbe-6-8-2-team01.vercel.app")
+            allowedOrigins = listOf("http://localhost:3000", "https://cdpn.io", "https://nbe-6-8-3-team01.vercel.app")
             allowedMethods = listOf("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
             allowCredentials = true
             allowedHeaders = listOf("*")
