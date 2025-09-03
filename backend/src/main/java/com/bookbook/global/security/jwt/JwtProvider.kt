@@ -155,6 +155,7 @@ class JwtProvider(
             secure = true // 프로덕션에서는 true로 변경
             path = "/"
             this.maxAge = maxAge
+            this.setAttribute("SameSite", "None")
         }
     }
 }
