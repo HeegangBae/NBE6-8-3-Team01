@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
             {
-                protocol: 'http',
+                protocol: 'https',
                 hostname: 'bookbook.fly.dev',
                 port: '',
                 pathname: '/**', // ⭐ 모든 경로의 이미지를 허용하도록 수정
