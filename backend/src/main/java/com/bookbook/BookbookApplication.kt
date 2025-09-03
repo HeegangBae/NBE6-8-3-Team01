@@ -11,5 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling
 class BookbookApplication
 
 fun main(args: Array<String>) {
+    val dbUrl = System.getenv("DATABASE_URL")
+    println("DEBUG: DATABASE_URL is $dbUrl")
     runApplication<BookbookApplication>(*args)
 }
