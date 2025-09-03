@@ -156,6 +156,7 @@ class JwtProvider(
             path = "/"
             this.maxAge = maxAge
             this.setAttribute("SameSite", "None")
+            domain = "bookbook.fly.dev"
         }
     }
 }
