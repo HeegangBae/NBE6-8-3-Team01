@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
         return [
             {
                 source: '/api/:path*',
-                destination: 'http://localhost:8080/api/:path*',
+                destination: 'https://bookbook.fly.dev/api/:path*',
             },
         ];
     },
@@ -14,8 +14,8 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             {
                 protocol: 'http',
-                hostname: 'localhost',
-                port: '8080',
+                hostname: 'bookbook.fly.dev',
+                port: '',
                 pathname: '/**', // ⭐ 모든 경로의 이미지를 허용하도록 수정
             },
         ],
