@@ -77,7 +77,7 @@ logging:
     org.springframework.transaction.interceptor: TRACE
     com.bookbook: DEBUG
 frontend:
-  base-url: https://bookbook.fly.dev
+  base-url: https://nbe-6-8-3-team01.vercel.app/
   signup-path: /bookbook/user/signup
   main-path: /bookbook
 aladin:
